@@ -147,9 +147,9 @@ function App() {
   };
 
   return (
-    <div>
-      <h2 style={{ textAlign: "center" }}>User SignUp App</h2>
-      <form onSubmit={handleSubmit}>
+    <div className='bg-img'>
+      <h2 style={{ textAlign: "center", color:"white" }}>User SignUp App</h2>
+      {!formSubmitSuccess && (<form onSubmit={handleSubmit} className='container1'>
         <div>
           <label>Username</label>
           <input
@@ -341,7 +341,7 @@ function App() {
         <div align="center">
           <button type="submit">Sign Up</button>
         </div>
-      </form>
+      </form>)}
 
       {formSubmitSuccess && (
         <div className='container'>

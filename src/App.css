@@ -54,7 +54,28 @@ form button:hover {
   margin-right: 5px;
 }
 
+.bg-img {
+  background-image: url("bgimage1.png");
+  min-height: 565px;
+  background-position: center;
+  background-repeat:repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container1 {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 500px;
+  padding: 16px;
+  max-height: 500px;
+  background-color: white;
+  overflow: scroll;
+}
+
 .container {
+  position: absolute;
   background-color: #c0bbbb;
   border: 1px solid #ccc;
   border-radius: 5px;
