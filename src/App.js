@@ -40,7 +40,7 @@ function App() {
       errors.password = "Password is required";
     }
     else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$/.test(formData.password)) {
-      errors.password = 'Password must be at least 8 characters';
+      errors.password = 'Password should contain atleast one lowercase letter, one uppercase letter, one number and one special character';
     }
     if (formData.confirmPassword === '') {
       errors.confirmPassword = "Confirm Password is required";
