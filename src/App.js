@@ -15,15 +15,15 @@ function App() {
     city: '',
     state: '',
     postalCode: '',
-    phoneNumber: '',
-    profilePicture: null
+    phoneNumber: ''
+    // profilePicture: null
   });
 
   const [formErrors, setFormErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formSubmitSuccess, setformSubmitSuccess] = useState(false);
-  const [image, setImage] = useState(null);
+  // const [image, setImage] = useState(null);
 
   const validateForm = () => {
     const errors = {};
@@ -72,9 +72,9 @@ function App() {
     else if (!/^\d{10}$/.test(formData.phoneNumber)) {
       errors.phoneNumber = 'Please enter a valid phone no. Phone number must be 10 digits.'
     }
-    if (!formData.profilePicture) {
-      errors.profilePicture = 'Profile Picture is required';
-    }
+    // if (!formData.profilePicture) {
+    //   errors.profilePicture = 'Profile Picture is required';
+    // }
     if (formData.streetAddress === '') {
       errors.streetAddress = 'Street Address is Required'
     }
@@ -108,38 +108,41 @@ function App() {
     setShowConfirmPassword(!showConfirmPassword);
   };
 
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setImage(e.target.result);
-      };
-      reader.readAsDataURL(file);
-      setFormData({ ...formData, profilePicture: image })
-    }
-  };
+  // const handleImageUpload = (e) => {
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     const reader = new FileReader();
+  //     reader.onload = (e) => {
+  //       setImage(e.target.result);
+  //     };
+  //     reader.readAsDataURL(file);
+  //     setFormData({ ...formData, profilePicture: image })
+  //   }
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
       setformSubmitSuccess(true);
-      setFormData({
-        username: '',
-        email: '',
-        password: '',
-        confirmPassword: '',
-        firstName: '',
-        lastName: '',
-        gender: '',
-        dateOfBirth: '',
-        streetAddress: '',
-        city: '',
-        state: '',
-        postalCode: '',
-        phoneNumber: '',
-        profilePicture: null,
-      });
+      setTimeout(() => {
+        setFormData({
+          username: '',
+          email: '',
+          password: '',
+          confirmPassword: '',
+          firstName: '',
+          lastName: '',
+          gender: '',
+          dateOfBirth: '',
+          streetAddress: '',
+          city: '',
+          state: '',
+          postalCode: '',
+          phoneNumber: ''
+          // profilePicture: null,
+        });
+        setformSubmitSuccess(false);
+      }, 10000);
     }
   };
 
@@ -324,7 +327,7 @@ function App() {
           {formErrors.phoneNumber && <span style={{ color: 'red' }}>{formErrors.phoneNumber}</span>}
         </div>
 
-        <div>
+        {/* <div>
           <label>Profile Picture</label>
           <input
             type="file"
@@ -333,9 +336,9 @@ function App() {
             onChange={handleImageUpload}
           />
           {formErrors.profilePicture && <span style={{ color: 'red' }}>{formErrors.profilePicture}</span>}
-        </div>
-
-        <div>
+        </div> */}
+      <br></br>
+        <div align="center">
           <button type="submit">Sign Up</button>
         </div>
       </form>
@@ -343,7 +346,8 @@ function App() {
       {formSubmitSuccess && (
         <div className='container'>
           <div align="center">
-            <img height="250px" width="250px" src={formData.profilePicture} alt="Uploaded" />
+            <h1>User Details</h1>
+            {/* <img height="250px" width="250px" src={formData.profilePicture} alt="Uploaded" /> */}
             <h2>{formData.username}</h2>
             <h3>{formData.firstName}    {formData.lastName}</h3>
             <h3>{formData.email}</h3>

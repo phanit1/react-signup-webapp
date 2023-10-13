@@ -55,12 +55,13 @@ form button:hover {
 }
 
 .container {
-  background-color: #f8f8f8;
+  background-color: #c0bbbb;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 20px;
+  width: 100%;
 }
 
 .container h2 {
