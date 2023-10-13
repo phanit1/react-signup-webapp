@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/reactsignupwebapp/static/css/main.c8163390.css",
-    "main.js": "/reactsignupwebapp/static/js/main.429bbee9.js",
-    "static/js/787.f64d3d24.chunk.js": "/reactsignupwebapp/static/js/787.f64d3d24.chunk.js",
-    "index.html": "/reactsignupwebapp/index.html",
-    "main.c8163390.css.map": "/reactsignupwebapp/static/css/main.c8163390.css.map",
-    "main.429bbee9.js.map": "/reactsignupwebapp/static/js/main.429bbee9.js.map",
-    "787.f64d3d24.chunk.js.map": "/reactsignupwebapp/static/js/787.f64d3d24.chunk.js.map"
+    "main.css": "/react-signup-webapp/static/css/main.c8163390.css",
+    "main.js": "/react-signup-webapp/static/js/main.4a629d25.js",
+    "static/js/787.f64d3d24.chunk.js": "/react-signup-webapp/static/js/787.f64d3d24.chunk.js",
+    "index.html": "/react-signup-webapp/index.html",
+    "main.c8163390.css.map": "/react-signup-webapp/static/css/main.c8163390.css.map",
+    "main.4a629d25.js.map": "/react-signup-webapp/static/js/main.4a629d25.js.map",
+    "787.f64d3d24.chunk.js.map": "/react-signup-webapp/static/js/787.f64d3d24.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c8163390.css",
-    "static/js/main.429bbee9.js"
+    "static/js/main.4a629d25.js"
   ]
 }
